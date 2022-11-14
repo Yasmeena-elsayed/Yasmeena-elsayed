@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="50dp"
@@ -19,7 +19,7 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/button1"
         android:layout_marginLeft="60dp"
@@ -27,6 +27,18 @@
         android:layout_marginRight="50dp"
         android:background="@color/cardview_light_background"
         android:text="Questionnaires"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button2"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/cardview_light_background"
+        android:text="FMRI"
         android:textStyle="bold" />
 
 </RelativeLayout>

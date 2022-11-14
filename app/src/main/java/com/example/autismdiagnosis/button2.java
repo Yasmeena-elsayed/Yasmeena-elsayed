@@ -21,7 +21,8 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
 
-public class button2 extends AppCompatActivity {
+public class button2 extends AppCompatActivity
+{
     RadioButton radioButton1, radioButton2, radioButton3, radioButton4,radioButton5,radioButton6,radioButton7,radioButton8,radioButton9,radioButton10;
     RadioGroup radioGroup1,radioGroup2,radioGroup3,radioGroup4,radioGroup5,radioGroup6,radioGroup7,radioGroup8,radioGroup9,radioGroup10;
     Button button3;
@@ -35,10 +36,7 @@ public class button2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_button2);
 
-        button3=(Button)findViewById(R.id.button3) ;
-
-
-
+        button3=(Button)findViewById(R.id.button3);
 
 
         radioGroup1 = findViewById(R.id.radiogroup1);
@@ -80,79 +78,68 @@ public class button2 extends AppCompatActivity {
                 radioButton10 = (RadioButton) findViewById(selectedId10);
 
 
+                if (radioButton1.getText().equals("Sometimes") || radioButton1.getText().equals("Rarly") || radioButton1.getText().equals("Never")) {
+                    arr[0] = 1;
+                    // Toast.makeText(button2.this,"yyyyyy", Toast.LENGTH_SHORT).show();
 
-                if (radioButton1.getText().equals("Sometimes")||radioButton1.getText().equals("Rarly")||radioButton1.getText().equals("Never")){
-                    arr[0]=1;
-                   // Toast.makeText(button2.this,"yyyyyy", Toast.LENGTH_SHORT).show();
-
+                } else {
+                    arr[0] = 0;
                 }
-                else{
-                    arr[0]=0;
+                if (radioButton2.getText().equals("Sometimes") || radioButton2.getText().equals("Rarly") || radioButton2.getText().equals("Never")) {
+                    arr[1] = 1;
+                } else {
+                    arr[1] = 0;
                 }
-                if (radioButton2.getText().equals("Sometimes")||radioButton2.getText().equals("Rarly")||radioButton2.getText().equals("Never")){
-                    arr[1]=1;
+                if (radioButton3.getText().equals("Sometimes") || radioButton3.getText().equals("Rarly") || radioButton3.getText().equals("Never")) {
+                    arr[2] = 1;
+                } else {
+                    arr[2] = 0;
                 }
-                else{
-                    arr[1]=0;
+                if (radioButton4.getText().equals("Sometimes") || radioButton4.getText().equals("Rarly") || radioButton4.getText().equals("Never")) {
+                    arr[3] = 1;
+                } else {
+                    arr[3] = 0;
                 }
-                if (radioButton3.getText().equals("Sometimes")||radioButton3.getText().equals("Rarly")||radioButton3.getText().equals("Never")){
-                    arr[2]=1;
+                if (radioButton5.getText().equals("Sometimes") || radioButton5.getText().equals("Rarly") || radioButton5.getText().equals("Never")) {
+                    arr[4] = 1;
+                } else {
+                    arr[4] = 0;
                 }
-                else{
-                    arr[2]=0;
+                if (radioButton6.getText().equals("Sometimes") || radioButton6.getText().equals("Rarly") || radioButton6.getText().equals("Never")) {
+                    arr[5] = 1;
+                } else {
+                    arr[5] = 0;
                 }
-                if (radioButton4.getText().equals("Sometimes")||radioButton4.getText().equals("Rarly")||radioButton4.getText().equals("Never")){
-                    arr[3]=1;
+                if (radioButton7.getText().equals("Sometimes") || radioButton7.getText().equals("Rarly") || radioButton7.getText().equals("Never")) {
+                    arr[6] = 1;
+                } else {
+                    arr[6] = 0;
                 }
-                else{
-                    arr[3]=0;
+                if (radioButton8.getText().equals("Sometimes") || radioButton8.getText().equals("Rarly") || radioButton8.getText().equals("Never")) {
+                    arr[7] = 1;
+                } else {
+                    arr[7] = 0;
                 }
-                if (radioButton5.getText().equals("Sometimes")||radioButton5.getText().equals("Rarly")||radioButton5.getText().equals("Never")){
-                    arr[4]=1;
+                if (radioButton9.getText().equals("Sometimes") || radioButton9.getText().equals("Rarly") || radioButton9.getText().equals("Never")) {
+                    arr[8] = 1;
+                } else {
+                    arr[8] = 0;
                 }
-                else{
-                    arr[4]=0;
-                }
-                if (radioButton6.getText().equals("Sometimes")||radioButton6.getText().equals("Rarly")||radioButton6.getText().equals("Never")){
-                    arr[5]=1;
-                }
-                else{
-                    arr[5]=0;
-                }
-                if (radioButton7.getText().equals("Sometimes")||radioButton7.getText().equals("Rarly")||radioButton7.getText().equals("Never")){
-                    arr[6]=1;
-                }
-                else{
-                    arr[6]=0;
-                }
-                if (radioButton8.getText().equals("Sometimes")||radioButton8.getText().equals("Rarly")||radioButton8.getText().equals("Never")){
-                    arr[7]=1;
-                }
-                else{
-                    arr[7]=0;
-                }
-                if (radioButton9.getText().equals("Sometimes")||radioButton9.getText().equals("Rarly")||radioButton9.getText().equals("Never")){
-                    arr[8]=1;
-                }
-                else{
-                    arr[8]=0;
-                }
-                if (radioButton10.getText().equals("Always")||radioButton10.getText().equals("Usually")||radioButton10.getText().equals("Sometimes")){
-                    arr[9]=1;
-                }
-                else{
-                    arr[9]=0;
+                if (radioButton10.getText().equals("Always") || radioButton10.getText().equals("Usually") || radioButton10.getText().equals("Sometimes")) {
+                    arr[9] = 1;
+                } else {
+                    arr[9] = 0;
                 }
 
                 //Toast.makeText(button2.this,arr[0]+""+arr[1]+arr[2]+arr[3]+arr[4]+arr[5]+arr[6]+arr[7]+arr[8]+arr[9]+"",Toast.LENGTH_SHORT).show();
 
-                byteBuffer= ByteBuffer.allocate(10*4);
-                for (int i = 0; i<10; i++) {
-                        byteBuffer.putFloat(arr[i]);
-                     }
+                byteBuffer = ByteBuffer.allocate(10 * 4);
+                for (int i = 0; i < 10; i++) {
+                    byteBuffer.putFloat(arr[i]);
+                }
 
 
-               // Toast.makeText(button2.this,byteBuffer.get(1)+""+byteBuffer.get(2)+byteBuffer.get(3)+byteBuffer.get(4)+byteBuffer.get(5)+byteBuffer.get(6)+byteBuffer.get(7)+byteBuffer.get(8)+byteBuffer.get(9),Toast.LENGTH_SHORT).show();
+                // Toast.makeText(button2.this,byteBuffer.get(1)+""+byteBuffer.get(2)+byteBuffer.get(3)+byteBuffer.get(4)+byteBuffer.get(5)+byteBuffer.get(6)+byteBuffer.get(7)+byteBuffer.get(8)+byteBuffer.get(9),Toast.LENGTH_SHORT).show();
 
                 try {
                     Questionaire model = Questionaire.newInstance(getApplicationContext());
@@ -171,8 +158,7 @@ public class button2 extends AppCompatActivity {
                     model.close();
 
 
-
-                    Toast.makeText(button2.this,"Autistic by " + (outputFeature0.getFloatArray()[0]*100) + " %",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(button2.this, "Autistic by " + (outputFeature0.getFloatArray()[0] * 100) + " %", Toast.LENGTH_SHORT).show();
 
                   /*
                     if (outputFeature0.getFloatArray()[0]<0.5){
@@ -194,13 +180,7 @@ public class button2 extends AppCompatActivity {
         });
 
 
-
-
     }
-
-
-
-
 
 
 }

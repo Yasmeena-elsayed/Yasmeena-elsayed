@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.autismdiagnosis">
 
-
-    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -16,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AutismDiagnosis"
         tools:targetApi="31">
+        <activity
+            android:name=".FMRI"
+            android:exported="false" />
         <activity
             android:name=".button2"
             android:exported="false" />

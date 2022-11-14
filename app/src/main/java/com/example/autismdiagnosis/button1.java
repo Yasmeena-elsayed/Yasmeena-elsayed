@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.autismdiagnosis.ml.Image;
 import com.example.autismdiagnosis.ml.Model;
 
 import org.tensorflow.lite.DataType;
@@ -71,37 +72,31 @@ public class button1 extends AppCompatActivity {
         predictBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                bitmap = Bitmap.createScaledBitmap(bitmap,150,150,true);
+                bitmap = Bitmap.createScaledBitmap(bitmap,200,200,true);
 
                 try {
-                    Model model = Model.newInstance(getApplicationContext());
+                    Image model = Image.newInstance(getApplicationContext());
 
                     // Creates inputs for reference.
-                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 150, 150, 3}, DataType.FLOAT32);
-
-                    TensorImage tensorImage = new TensorImage(DataType.FLOAT32);
+                    TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 200, 200, 3}, DataType.FLOAT32);
+                    TensorImage tensorImage=new TensorImage(DataType.FLOAT32);
                     tensorImage.load(bitmap);
-                    ByteBuffer byteBuffer = tensorImage.getBuffer();
-                    
+                    ByteBuffer byteBuffer=tensorImage.getBuffer();
                     inputFeature0.loadBuffer(byteBuffer);
 
                     // Runs model inference and gets result.
-                    Model.Outputs outputs = model.process(inputFeature0);
+                    Image.Outputs outputs = model.process(inputFeature0);
                     TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
                     // Releases model resources if no longer used.
                     model.close();
 
-
-                    //result.setText(outputFeature0.getFloatArray()[0] +"");
                     if(outputFeature0.getFloatArray()[0]>0.5){
                         result.setText("Autistic");
-
                     }
                     else{
                         result.setText("Normal");
                     }
-
                 } catch (IOException e) {
                     // TODO Handle the exception
                 }

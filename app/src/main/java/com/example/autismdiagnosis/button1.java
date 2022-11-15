@@ -37,7 +37,7 @@ public class button1 extends AppCompatActivity {
     ImageView imageView;
     Bitmap bitmap;
 
-
+    float arr[]=new float[3];
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,7 +91,7 @@ public class button1 extends AppCompatActivity {
                     // Releases model resources if no longer used.
                     model.close();
 
-                    if(outputFeature0.getFloatArray()[0]>0.5){
+                    if(outputFeature0.getFloatArray()[0]>outputFeature0.getFloatArray()[1]){
                         result.setText("Autistic");
                     }
                     else{

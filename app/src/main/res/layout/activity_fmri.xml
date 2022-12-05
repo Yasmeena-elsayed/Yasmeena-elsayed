@@ -6,16 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".FMRI">
 
-    <TextView
-        android:id="@+id/fmri"
+    <HorizontalScrollView
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="FMRI"
-        android:textAlignment="center"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.136"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="555dp" />
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="30dp">
+
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/csvtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="400dp"
+                android:text="CSV File contents"
+                android:textSize="20dp" />
+
+
+
+
+
+        </ScrollView>
+
+    </HorizontalScrollView>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="54dp"
+        android:layout_marginBottom="38dp"
+        android:text="select" />
+
+    <Button
+        android:id="@+id/predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="39dp"
+        android:text="Predict" />
+
+    <TextView
+        android:id="@+id/resultfmri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/predict"
+        android:layout_marginBottom="36dp"
+        android:maxHeight="400dp"
+        android:text="Result"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>

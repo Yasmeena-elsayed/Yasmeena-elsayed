@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="60dp"
         android:layout_marginTop="50dp"
@@ -19,11 +19,11 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/button1"
         android:layout_marginLeft="60dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="24dp"
         android:layout_marginRight="50dp"
         android:background="@color/cardview_light_background"
         android:text="Questionnaires"
@@ -31,14 +31,53 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/button2"
         android:layout_marginLeft="70dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="23dp"
         android:layout_marginRight="50dp"
         android:background="@color/cardview_light_background"
         android:text="FMRI"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/About"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button5"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/cardview_light_background"
+        android:text="About"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/About"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/cardview_light_background"
+        android:text="Book an appointment for the examination"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/advices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/book"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/cardview_light_background"
+        android:text="Advices"
+        android:textStyle="bold" />
+
+
+
 
 </RelativeLayout>

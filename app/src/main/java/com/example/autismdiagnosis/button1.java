@@ -18,8 +18,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.autismdiagnosis.ml.Image;
+
 import com.example.autismdiagnosis.ml.Model;
+import com.example.autismdiagnosis.ml.ModelEdit;
 
 import org.tensorflow.lite.DataType;
 import org.tensorflow.lite.support.image.TensorImage;
@@ -75,27 +76,27 @@ public class button1 extends AppCompatActivity {
                 bitmap = Bitmap.createScaledBitmap(bitmap,200,200,true);
 
                 try {
-                    Image model = Image.newInstance(getApplicationContext());
+                    ModelEdit model = ModelEdit.newInstance(getApplicationContext());
 
                     // Creates inputs for reference.
                     TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 200, 200, 3}, DataType.FLOAT32);
-                    TensorImage tensorImage=new TensorImage(DataType.FLOAT32);
+                    TensorImage tensorImage= new TensorImage(DataType.FLOAT32);
                     tensorImage.load(bitmap);
                     ByteBuffer byteBuffer=tensorImage.getBuffer();
                     inputFeature0.loadBuffer(byteBuffer);
 
                     // Runs model inference and gets result.
-                    Image.Outputs outputs = model.process(inputFeature0);
+                    ModelEdit.Outputs outputs = model.process(inputFeature0);
                     TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
                     // Releases model resources if no longer used.
                     model.close();
 
                     if(outputFeature0.getFloatArray()[0]>outputFeature0.getFloatArray()[1]){
-                        result.setText("Autistic");
-                    }
-                    else{
                         result.setText("Normal");
+                    }
+                    else {
+                        result.setText("Autistic");
                     }
                 } catch (IOException e) {
                     // TODO Handle the exception

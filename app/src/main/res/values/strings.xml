@@ -1,3 +1,70 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Autism diagnosis</string>
+    <string name="edtx"> patient Name</string>
+    <string name="edtx2">First section of the App consists of four tests will operate as follows:\n \n The first test the parents will capture the face of their child or select one of his\her photos and the app will depend on the DL model predict and diagnose if the child is autistic or not.\n \n The second test the parents will answer questions about their child about his behavior while speaking and his ability to communicate and the app depend on the DL model will appear disease (autism) rate in this child.\n \n The third test the parents will enter the file of the result of Functional magnetic resonance imaging (FMRI) and the app depend on the DL model will predict and diagnose if the child is autistic or not.\n \n The fourth test the parents will enter the file of the result of Electroencephalography (EEG) and the app depend on the DL model will predict and diagnose if the child is autistic or not.\n \n Second section of the App consists of three pages:\n\n First page: consists of information about Autism (ASD) about its definition, characteristics and how to deal with people with autism and the fourth tests about how to conduct them.\n \n Second page: Through it, autistic people can book an appointment with the organization’s doctor or the center responsible for the application by entering the patient’s data, which includes his medical history and his ability to communicate.\n \n Third page:  Allows parents of people with autism to share their experiences and questions through it, and to respond to those questions by specialists and doctors affiliated with the organization or center responsible for the application.\n \n</string>
+    <string name="edtx3">Autism spectrum disorder (ASD) is a developmental disability caused by differences in the brain.\n People with ASD often have problems with social communication and interaction, and restricted or repetitive behaviors or interests.\n People with ASD may also have different ways of learning, moving, or paying attention.\n \n Research shows that early intervention leads to positive outcomes later in life for people with autism.\n However, Autism disorder in kids is hard to spot and diagnose, to make a diagnosis, doctors look at the child’s developmental history, evaluating his language and interactive abilities, and testing some of his activities, discussing with their parents the child\'s behavior and the extent of his linguistic and interactive development with them and with the other children around him as well., \n \n however, some kids don’t get diagnosed until they are adolescents or adults.\n This delay means that people with ASD might not get the early help they need. Latency in the diagnosis of ASD can result in significant disability and pressure on affected children and their families.\n \nArtificial intelligence techniques have been used to help diagnose autism, but the problem with current methods is that they depend on only one method of diagnosis,\n however the disease is more complex and needs more than one way to diagnose it correctly \n.</string>
+    <string name="edtx4" tools:ignore="DuplicateDefinition">"Summary About Disease"</string>
+    <string name="edtx5">"Information About the Components of app"</string>
+    <string name="edtx6">Tips and advice for parents of autistic children and teachers</string>
+    <string name="edtx7">1 – Do not use violence or beating at all with autistic children (and other children).\n \n
+2 – Relying on rewards and reinforcement in modifying the child"s abnormal or aggressive behaviors.\n
+3 – An autistic child needs more patience and time to teach or train him than the average child.\n
+4 – His mental, sensory and motor abilities are limited, and this must be taken into account when education or training.\n
+5 – The autistic child thinks about images and sensory materials, not words and symbols.\n
+6 – Parents and specialists should use pictures and models first, then words and language.\n
+7 – You should avoid too many words and long instructions, as autistic children cannot remember the sequence of words or instructions.
+And they need time to relive ideas.\n
+8 – The autistic child uses one of the five senses at a time.\n
+9 – Autistic children learn to read if they learn letters and then words (unlike the normal child).\n
+10 – Most autistic children have a talent for drawing and using computers, and this should be encouraged.\n
+11 – Intense lights and sounds cause discomfort to autistic children.\n
+12 – It is difficult for autistic children to absorb theoretical, abstract, and oral information.\n
+13 – Some autistic children respond and improve their speech while playing or swinging,but the child should not be forced to play or swing...\n
+14 – It is preferable that the autistic child is not asked to see and hear at the same time.\n
+15 – It is preferable to use real objects and situations when teaching and training autistic children.\n
+16 – Autistic children often eat greedily, and usually eat large amounts of harmful foods.\n
+17 – Autistic children do not understand the feelings of others, and do not express their feelings.\n
+18 – The sense of touch is one of the most effective senses for those who use non-verbal communication.\n
+19 – It is difficult for an autistic child to use a computer mouse because of difficulty in muscle control or pressing the mouse.
+And also it is difficult for him to write.\n
+20 – Some autistic children suffer from hyperactivity and attention deficit.\n
+21 - In the case of using computers in education, it is necessary to place the keyboard close to the screen,
+ as some autistic children do not realize that they have to look at the screen after pressing the keyboard.\n
+22 – In the case of non-verbal communication, it is easy to associate words with images,
+where the word is printed under the image they represent.\n
+23 – Try to gain the child's trust and love before starting any activity.\n
+24 – You should avoid teaching two skills at once.\n
+25 – It is preferable to use more than one clear, attractive and real educational method
+to ensure that boredom and aversion do not leakto the child\n
+26 – Taking into account the diversity of voice layers to suit the situation and to attract the attention of the autistic child.\n
+27- Attention should be paid to the individual differences between cases of autism. (in terms of upbringing conditions and abilities).\n
+28 – Encourage the child to participate and express his opinion.\n
+29 – In case of failure, do not blame the child, but review the plan and goals that have been set.\n
+30- A child's symptoms improve as the child gets older.\n
+31- When applying the individual educational program, the program must be placed in a place visible to the child,
+and the roles and actions are defined, taking into account the child's abilities.\n
+32 – Reducing sensory stimuli that cause visual or auditory distraction,
+even the sight of the teacher or trainer, his movements, clothing, voice, and the posters, videos, and sounds contained in the place.\n
+33 – The need to understand the causes of negative behaviors so that the symptoms disappear, the most important of which are sabotage,
+self-harm, and resistance.\n
+34 – Do not over-stick physically to the child, and the trainer does not appear afraid,
+especially if the child tries to harm himself or others.\n
+35- Play is an essential and indispensable entrance to the rehabilitation of young people, especially group play.\n</string>
+    <string name="title">PatientShip Form</string>
+    <string name="test1">The result of Face Image Test</string>
+    <string name="test2">The precentage of Questionnaire Test</string>
+    <string name="test3">The result of FMRI Test</string>
+
+    <string name="title2">Parent Form</string>
+    <string name="edtx8"> Full Name</string>
+    <string name="edtx9"> Phone</string>
+    <string name="edtx10"> Job</string>
+    <string name="edtx11"> Address</string>
+    <string name="edtx12"> Email</string>
+    <string name="edtx14">If yes, Write the name of the disease</string>
+    <string name="edtx15">Are there other autistic children in the family history?</string>
+    <string name="edtx16">If yes, please write his family grade</string>
+    <string name="edtx17">Answer</string>
+
+
 </resources>
